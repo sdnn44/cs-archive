@@ -1,0 +1,17 @@
+.search-form {
+    width: 100%;
+    max-width: 680px;
+}
+.search-form-elem {
+    padding: .1rem 4rem;
+    border-radius: 5rem;
+    display: flex;
+    justify-content: space-between;
+    background-color: var(--white-color);
+}
+.search-form-elem .form-control {
+    font-size: 2rem;
+}
+.search-form-elem .form-control::placeholder {
+    opacity: .9;
+}

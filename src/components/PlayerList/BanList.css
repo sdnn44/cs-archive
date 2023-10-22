@@ -1,0 +1,157 @@
+body {
+    padding: 0;
+    margin: 0;
+    background-color: #17141d;
+    color: white;
+    font-family: 'DM Mono', monospace;
+}
+
+.card-container {
+    width: 100vw;
+    display: flex;
+    padding: 3rem;
+    overflow-x: scroll;
+}
+
+.card {
+    display: flex;
+    position: relative;
+    flex-direction: column;
+    height: 350px;
+    width: 400px;
+    min-width: 250px;
+    padding: 1.5rem;
+    border-radius: 16px;
+    background-color: #17141d;
+    box-shadow: -1rem 0 3rem #000;
+    transition: .2s;
+}
+
+.card-title {
+    display: flex;
+    align-items: center;
+}
+
+.website-container {
+    display: flex;
+}
+
+.website-container img {
+    width: 40px;
+    height: 40px;
+}
+
+
+.website-info {
+    display: flex;
+    flex-direction: column;
+    margin-left: 10px;
+}
+
+.card-title p{
+    text-transform: uppercase;
+}
+
+.ban-details {
+    padding: 1rem;
+}
+
+.ban-details p {
+    margin: 1rem 0;
+}
+
+.ban-details span {
+    font-style: normal;
+    font-weight: 700;
+    color: #7a7a8c;
+}
+
+.card-container::-webkit-scrollbar {
+    width: 10px;
+    height: 10px;
+}
+
+.card-container::-webkit-scrollbar-thumb {
+    background: #201c29;
+    border-radius: 10px;
+    box-shadow: inset 2px 2px 2px hsla(0,0%,100%,.25), inset -2px -2px 2px rgba(0,0,0,.25);
+}
+
+.card-container::-webkit-scrollbar-track {
+    background: linear-gradient(90deg,#201c29,#201c29 1px,#17141d 0,#17141d);
+}
+
+.card:hover {
+    transform: translateY(-1rem);
+}
+
+.card:hover~.card {
+    transform: translateX(130px);
+}
+
+.card:not(:first-child) {
+    margin-left: -130px;
+}
+
+.status {
+    position: relative;
+    display: grid;
+    grid-template-columns: 75px 1fr;
+    align-items: center;
+    margin: 9rem 0 0;
+}
+
+.status-banned {
+    position: relative;
+    display: grid;
+    grid-template-columns: 75px 1fr;
+    align-items: center;
+    margin: 1rem 0 0;
+}
+
+.player-avatar img{
+    display: block;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    filter: grayscale(100%);
+    margin: 16px 10px;
+}
+.half-circle {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 60px;
+    height: 48px;
+    fill: none;
+    stroke: hsl(136, 99%, 30%);
+    stroke-width: 8;
+    stroke-linecap: round;
+}
+
+.half-circle-banned {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 60px;
+    height: 48px;
+    fill: none;
+    stroke: hwb(0 2% 31%);
+    stroke-width: 8;
+    stroke-linecap: round;
+}
+
+.player-status-prefix{
+    font-style: normal;
+    font-weight: 700;
+    color: #7a7a8c;
+}
+
+.card-title h2:hover{
+    background: linear-gradient(90deg,#ff8a00,#e52e71);
+    text-shadow: none;
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+    background-clip: text;
+    cursor: pointer;
+}

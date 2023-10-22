@@ -1,0 +1,76 @@
+main {
+    display: flex;
+    flex-direction: column;
+}
+
+section {
+    min-height: 100vh;
+    padding: 10rem 7% 2rem; 
+}
+.home {
+    display: flex;
+    align-items: center;
+}
+.home .home-content {
+    max-width: 44rem;
+}
+.home-content h3 {
+    font-size: 3.2rem;
+    font-weight: 700;
+    line-height: .3;
+}
+
+.home-content h1 {
+    font-size: 5.6rem;
+    font-weight: 700;
+}
+
+.home-content p {
+    font-size: 1.6rem;
+}
+
+.btn {
+    display: inline-block;
+    padding: 1.2rem 2.8rem;
+    background-color: var(--main-color);
+    border-radius: .6rem;
+    box-shadow: 0 .2rem .5rem var(--shadow-color);
+    font-size: 1.6rem;
+    color: var(--white-color);
+    letter-spacing: .1rem;
+    font-weight: 600;
+    transition: .5s ease;
+    margin: 2.5rem 0;
+}
+.btn:hover {
+    background: var(--darker-main-color);
+    /* color: var(--main-color); */
+    cursor: pointer;
+}
+.container {
+    position: absolute;
+    /* top: 0; */
+    top: 41%;
+    right: 0;
+    transform: translateY(-50%);
+    width: 768px;
+    height: 768px;
+    overflow: hidden;
+    pointer-events: none;
+    /* border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center; */
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 0;
+    height: 0;
+    border-top: 384px solid var(--main-color);
+    border-right: 384px solid var(--main-color);
+    border-bottom: 384px solid var(--white-color);
+    border-left: 384px solid var(--white-color);
+}
