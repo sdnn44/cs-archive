@@ -1,0 +1,9 @@
+.player-container {
+    width: 100vw;
+    display: flex;
+    padding: 3rem;
+    flex-direction: row;
+    justify-content: space-evenly;
+    background-color: #17141d;
+    color: white;
+}

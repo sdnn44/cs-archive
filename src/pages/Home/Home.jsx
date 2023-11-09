@@ -21,10 +21,8 @@ const Home = () => {
             może sprawdzić, czy została nałożona blokada permanentna na to konto
             w przeszłości i trwa do dziś.
           </p>
-          <Link to="/sprawdz">
-            <a href="#" className="btn">
-              Sprawdź gracza
-            </a>
+          <Link to="/sprawdz" className="btn">
+            Sprawdź gracza
           </Link>
         </div>
         <div className="container">

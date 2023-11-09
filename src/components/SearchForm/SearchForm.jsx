@@ -17,10 +17,10 @@ const SearchForm = () => {
     // if()
     console.log(tempSearchId);
     setSearchId(searchText.current.value) // 40:26
+    navigate(`/sprawdz/${tempSearchId}`)
     //to do:
     //parse steamid - steam64
-    //design steam information for player
-    //design ban details if banned 
+
   }
 
   return (

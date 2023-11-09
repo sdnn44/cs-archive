@@ -1,12 +1,12 @@
-body {
+/* body {
     padding: 0;
     margin: 0;
-    background-color: #17141d;
-    color: white;
     font-family: 'DM Mono', monospace;
-}
+} */
 
 .card-container {
+    background-color: #17141d;
+    color: white;
     width: 100vw;
     display: flex;
     padding: 3rem;
@@ -22,7 +22,7 @@ body {
     min-width: 250px;
     padding: 1.5rem;
     border-radius: 16px;
-    background-color: #17141d;
+    background: linear-gradient(90deg,#421964,#130c35);
     box-shadow: -1rem 0 3rem #000;
     transition: .2s;
 }
@@ -40,7 +40,6 @@ body {
     width: 40px;
     height: 40px;
 }
-
 
 .website-info {
     display: flex;
@@ -67,12 +66,12 @@ body {
 }
 
 .card-container::-webkit-scrollbar {
-    width: 10px;
-    height: 10px;
+    width: 1px;
+    height: 1px;
 }
 
 .card-container::-webkit-scrollbar-thumb {
-    background: #201c29;
+    background: linear-gradient(90deg,#421964,#130c35);
     border-radius: 10px;
     box-shadow: inset 2px 2px 2px hsla(0,0%,100%,.25), inset -2px -2px 2px rgba(0,0,0,.25);
 }
@@ -141,13 +140,13 @@ body {
     stroke-linecap: round;
 }
 
-.player-status-prefix{
+.player-status-prefix {
     font-style: normal;
     font-weight: 700;
     color: #7a7a8c;
 }
 
-.card-title h2:hover{
+.card-title h2:hover {
     background: linear-gradient(90deg,#ff8a00,#e52e71);
     text-shadow: none;
     -webkit-text-fill-color: transparent;
