@@ -14,13 +14,6 @@
     font-size: 1.3rem;
 }
 
-.last-activity {
-    display: flex;
-    justify-content: space-between;
-    padding: 1rem;
-    background: linear-gradient(90deg,#421964,#130c35);
-}
-
 .game-name-container {
     display: flex;
     flex-direction: row;
@@ -44,38 +37,4 @@
     width: 200px;
 }
 
-.activity {
-    margin: 1rem 0;
-}
 
-.activity span {
-    color: #7a7a8c;
-    margin: 0 0.4rem 0 0;
-    font-weight: 600;
-}
-
-.other-activity {
-    padding: 1rem;
-}
-
-.other-activity-game-container {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    margin: 1rem 0;
-    justify-content: space-around;
-}
-
-.other-activity-game-container:nth-child(1) {
-    border-bottom: 1px solid;
-    border-image-slice: 1;
-    border-image-source: linear-gradient(90deg,#421964,#130c35);
-}
-.other-activity-game-logo img{
-    width: 32px;
-    height: 32px;
-}
-.other-activity-name {
-    /* margin-left: 2rem; */
-    font-weight: 600;
-}

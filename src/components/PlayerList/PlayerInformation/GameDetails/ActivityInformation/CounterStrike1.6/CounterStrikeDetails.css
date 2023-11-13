@@ -1,0 +1,10 @@
+.last-activity-container-blured {
+    -webkit-filter: blur(4px);
+}
+
+.last-activity {
+    display: flex;
+    justify-content: space-between;
+    padding: 1rem;
+    background: linear-gradient(90deg,#421964,#130c35);
+}

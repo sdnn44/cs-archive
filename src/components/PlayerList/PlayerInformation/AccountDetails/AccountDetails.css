@@ -15,10 +15,20 @@
 
 .player-title {
     display: flex;
+    height: 6rem;
     flex-direction: row;
     justify-content: space-between;
     padding: 1rem;
     background: linear-gradient(90deg,#421964,#130c35);
+}
+
+.title-text {
+    font-size: 2rem;
+    text-transform: uppercase;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    color: #fff;
 }
 
 .player-information-container {
@@ -37,37 +47,6 @@
     margin-left: 10px;
 }
 
-.player-information-header {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-}
-
-.player-name-status {
-    margin-left: 3rem;
-}
-
-.player-name-status h4 {
-    font-weight: 400;
-    color: #1490d7;
-} 
-
-/* .player-information-avatar {
-    display: flex;
-    border: 1px solid red;
-    z-index: 1;
-} */
-
-.player-information-avatar img {
-    width: 100px;
-    height: 100px;
-    position: relative;
-    top: 3rem;
-    left: 1rem;
-
-    border-bottom: 2px solid #0275b7;
-}
-
 .player-information-text {
     display: flex;
     justify-content: space-between;
@@ -77,15 +56,70 @@
     width: 55rem;
 }
 
-.detailed-information {
-    padding: 1rem;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
+.badge {
+    position: relative;
+    width: 4em;
+    height: 6.2em;
+    border-radius: 10px;
+    display: inline-block;
+    right: 3rem;
+    top: 0rem;
+    transition: all 0.2s ease;
 }
 
-.detailed-information span {
-    color: #7a7a8c;
-    font-weight: 600;
-    margin: 0 0.4rem 0 0;
+.badge:before,
+.badge:after {
+    position: absolute;
+    width: inherit;
+    height: inherit;
+    border-radius: inherit;
+    background: inherit;
+    content: "";
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
 }
+
+.badge:before {
+    transform: rotate(60deg);
+}
+
+.badge:after {
+    transform: rotate(-60deg);
+}
+.badge .circle {
+    /* width: 60px;
+    height: 60px;
+    position: absolute;
+    background: #fff;
+    border-radius: 50%;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 10;
+    margin: auto; */
+    z-index: 10;
+    width: 50px;
+    height: 50px;
+    position: absolute;
+    color: white;
+}
+.badge .circle span{
+    font-size: 2em;
+    margin-top: 8px;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.purple {
+    background: linear-gradient(to bottom right, #ab47bc 0%, #4527a0 100%);
+    color: #7127a8;
+  }
+
+  .badge.blured {
+    -webkit-filter: blur(3px);
+  }

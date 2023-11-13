@@ -1,5 +1,5 @@
 import React from "react";
-import { useGlobalContext } from "../../../../context";
+import { useGlobalContext } from "../../../../../context";
 import GavelIcon from "@mui/icons-material/Gavel";
 import "./SteamBanOtherview.css";
 
