@@ -7,7 +7,7 @@ import Home from "./pages/Home/Home";
 import About from "./pages/About/About";
 import Header from "./components/Header/Header";
 import PlayerStatus from "./components/PlayerList/PlayerInformation/PlayerStatus";
-import BanList from "./components/PlayerList/BanList";
+import BanList from "./components/PlayerList/PlayerInformation/WebsiteBans/BanList";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 

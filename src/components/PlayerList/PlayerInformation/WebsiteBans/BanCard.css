@@ -1,25 +1,10 @@
-/* body {
-    padding: 0;
-    margin: 0;
-    font-family: 'DM Mono', monospace;
-} */
-
-.card-container {
-    background-color: #17141d;
-    color: white;
-    width: 100vw;
-    display: flex;
-    padding: 3rem;
-    overflow-x: scroll;
-}
-
 .card {
     display: flex;
     position: relative;
     flex-direction: column;
     height: 350px;
     width: 400px;
-    min-width: 250px;
+    min-width: 260px;
     padding: 1.5rem;
     border-radius: 16px;
     background: linear-gradient(90deg,#421964,#130c35);
@@ -47,6 +32,15 @@
     margin-left: 10px;
 }
 
+.website-info a{
+    text-decoration: none;
+    color: white;
+}
+
+.website-info h2 {
+    display: inline;
+}
+
 .card-title p{
     text-transform: uppercase;
 }
@@ -67,7 +61,7 @@
 
 .card-container::-webkit-scrollbar {
     width: 1px;
-    height: 1px;
+    height: 10px;
 }
 
 .card-container::-webkit-scrollbar-thumb {
@@ -97,7 +91,7 @@
     display: grid;
     grid-template-columns: 75px 1fr;
     align-items: center;
-    margin: 9rem 0 0;
+    margin: 7rem 0 0;
 }
 
 .status-banned {
