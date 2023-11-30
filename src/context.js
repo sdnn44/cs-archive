@@ -2,15 +2,19 @@ import React, { useState, useContext, useEffect } from "react";
 import { useCallback } from "react";
 import { steamIDtoSteam64 } from "./utils/steamid-conventer";
 
-const URL = "http://localhost:3001/api/player?steamid=";
-const URL_level = "http://localhost:3001/api/player_level?steamid=";
-const URL_steamBans = "http://localhost:3001/api/steambans?steamid=";
-const URL_playerGames = "http://localhost:3001/api/player_games?steamid=";
-// 76561197960435530
+const BASE_URL = "http://localhost:3001/api/";
+const ENDPOINTS = {
+  player: "player",
+  steamBans: "steambans",
+  playerLevel: "player_level",
+  playerGames: "player_games",
+};
+
 const AppContext = React.createContext();
 
 const AppProvider = ({ children }) => {
-  const [searchId, setSearchId] = useState("STEAM_0:0:84901");
+  const storedSearchId = sessionStorage.getItem("searchId") || "STEAM_0:0:84901";
+  const [searchId, setSearchId] = useState(storedSearchId);
   const [player, setPlayer] = useState([]);
   const [playerSteamBans, setPlayerSteamBans] = useState([]);
   const [playerGames, setPlayerGames] = useState([]);
@@ -18,69 +22,51 @@ const AppProvider = ({ children }) => {
   const [loading, setLoading] = useState(true);
   const [resultTitle, setResultTitle] = useState("");
 
-  const fetchPlayer = useCallback(async () => {
-    setLoading(true);
+  const fetchData = useCallback(async (endpoint, steam64) => {
+    try {
+      setLoading(true);
+      const response = await fetch(`${BASE_URL}${endpoint}?steamid=${steam64}`);
+      const data = await response.json();
+      console.log(data);
+
+      switch (endpoint) {
+        case ENDPOINTS.player:
+          const searchedPlayer = data.response.players[0];
+          setPlayer(searchedPlayer);
+          if (searchedPlayer) setResultTitle("The player you are looking for has been found");
+          else setResultTitle("Player not found");
+          break;
+        case ENDPOINTS.steamBans:
+          const getPlayerBans = data.players[0];
+          setPlayerSteamBans(getPlayerBans);
+          break;
+        case ENDPOINTS.playerLevel:
+          const getSteamLevel = data.response;
+          setSteamLevel(getSteamLevel);
+          break;
+        case ENDPOINTS.playerGames:
+          const getPlayerGames = data.response;
+          setPlayerGames(getPlayerGames);
+          break;
+        default:
+          break;
+      }
+
+      setLoading(false);
+    } catch (error) {
+      console.log(error);
+      setLoading(false);
+    }
+  }, []);
+
+  const fetchPlayer = useCallback(() => {
     const steam64 = steamIDtoSteam64(searchId);
 
-    try {
-      console.log("searchID " + searchId);
-      const response = await fetch(`${URL}${steam64}`);
-      const data = await response.json();
-      console.log(data);
-      const searchedPlayer = data.response.players[0];
-      console.log(searchedPlayer);
-
-      setPlayer(searchedPlayer);
-      if (searchedPlayer)
-        setResultTitle("The player you are looking has been found");
-      else setResultTitle("Player not found");
-      setLoading(false);
-    } catch (error) {
-      console.log(error);
-      setLoading(false);
-    }
-
-    try {
-      setLoading(true);
-      const response = await fetch(`${URL_steamBans}${steam64}`);
-      const data = await response.json();
-      console.log(data);
-      const getPlayerBans = data.players[0];
-      setPlayerSteamBans(getPlayerBans);
-      setLoading(false);
-    } catch (error) {
-      console.log(error);
-      setLoading(false);
-    }
-
-    try {
-      setLoading(true);
-      const response = await fetch(`${URL_level}${steam64}`);
-      const data = await response.json();
-      const getSteamLevel = data.response;
-      console.log(getSteamLevel);
-      setSteamLevel(getSteamLevel);
-      setLoading(false);
-    } catch (error) {
-      console.log(error);
-      setLoading(false);
-    }
-
-    try {
-      setLoading(true);
-      const response = await fetch(`${URL_playerGames}${steam64}`);
-      const data = await response.json();
-      const getPlayerGames = data.response;
-      console.log(getPlayerGames);
-      setPlayerGames(getPlayerGames);
-      setLoading(false);
-    } catch (error) {
-      console.log(error);
-      setLoading(false);
-    }
-  }, [searchId]);
+    Object.values(ENDPOINTS).forEach((endpoint) => fetchData(endpoint, steam64));
+  }, [searchId, fetchData]);
 
   useEffect(() => {
+    sessionStorage.setItem("searchId", searchId);
     fetchPlayer();
   }, [searchId, fetchPlayer]);
 

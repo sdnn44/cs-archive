@@ -29,10 +29,36 @@ const BanList = () => {
 
   const [dataStrefaCOD, setDataStrefaCod] = useState([]);
   const [dataStrefaDD2, setDataStrefaDD2] = useState([]);
+  const [dataPsychasiada1, setDataPsychasiada1] = useState([]);
+  const [dataPsychasiada2, setDataPsychasiada2] = useState([]);
+  const [dataGiniemyzhonorem, setDataGiniemyzhonorem] = useState([]);
+  const [dataBandaskilla, setDataBandaskilla] = useState([]);
+  const [dataGamefuture1, setDataGamefuture1] = useState([]);
+  const [dataGamefuture2, setDataGamefuture2] = useState([]);
+  const [dataFragarena, setDataFragarena] = useState([]);
+  const [dataLuzownia, setDataLuzownia] = useState([]);
+  const [dataFragujemy, setDataFragujemy] = useState([]);
+  const [dataKatujemy, setDataKatujemy] = useState([]);
+  const [dataMaliver, setDataMaliver] = useState([]);
+  const [dataCsowicze, setDataCsowicze] = useState([]);
+  const [data1s2k, setData1s2k] = useState([]);
 
   useEffect(() => {
     fetchData("bans/strefaskillacod/", setDataStrefaCod, searchId);
     fetchData("bans/strefaskilladd2/", setDataStrefaDD2, searchId);
+    fetchData("bans/psychasiada1/", setDataPsychasiada1, searchId);
+    fetchData("bans/psychasiada2/", setDataPsychasiada2, searchId);
+    fetchData("bans/giniemyzhonorem/", setDataGiniemyzhonorem, searchId);
+    fetchData("bans/bandaskilla/", setDataBandaskilla, searchId);
+    fetchData("bans/gamefuture1/", setDataGamefuture1, searchId);
+    fetchData("bans/gamefuture2/", setDataGamefuture2, searchId);
+    fetchData("bans/fragarena/", setDataFragarena, searchId);
+    fetchData("bans/luzownia/", setDataLuzownia, searchId);
+    fetchData("bans/fragujemy/", setDataFragujemy, searchId);
+    fetchData("bans/katujemy/", setDataKatujemy, searchId);
+    fetchData("bans/maliver/", setDataMaliver, searchId);
+    fetchData("bans/csowicze/", setDataCsowicze, searchId);
+    fetchData("bans/1shot2kill/", setData1s2k, searchId);
   }, [steamID]);
 
 
