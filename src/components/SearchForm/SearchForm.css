@@ -2,6 +2,9 @@
     width: 100%;
     max-width: 680px;
 }
+.search-form p {
+    color: red;
+}
 .search-form-elem {
     padding: .1rem 4rem;
     border-radius: 5rem;
@@ -14,4 +17,49 @@
 }
 .search-form-elem .form-control::placeholder {
     opacity: .9;
+}
+.tooltipText {
+    position: relative;
+    color: orange;
+    font-size: 12px;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.4s ease-in-out, visibility 0.4s ease-in-out;
+}
+.tooltipText:not([data-tip=""])  {
+    opacity: 1;
+    visibility: visible;
+}
+.search-form-elem input:focus + .tooltipText {
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.4s ease-in-out, visibility 0.4s ease-in-out;
+}
+.tooltipText:after {
+    position: absolute;
+    width: 12em;
+    background-color: #202842;
+    content: attr(data-tip);
+    padding: 0.6em 0;
+    color: #ffffff;
+    margin: auto;
+    left: -10.5em;
+    right: 0;
+    bottom: 9em;
+    text-align: center;
+    border-radius: 1em;
+    border: 1px solid yellow;
+}
+.tooltipText:before {
+    position: absolute;
+    content: "";
+    height: 0;
+    width: 0;
+    border-top: 0.5em solid yellow;
+    border-left: 0.5em solid transparent;
+    border-right: 0.5em solid transparent;
+    margin: auto;
+    left: 0;
+    right: 0;
+    bottom: 8.5em;
 }
