@@ -11,14 +11,14 @@ import * as yup from "yup";
 const schema = yup.object().shape({
   steamid: yup
     .string()
-    .matches(/^STEAM_[0-5]:[01]:[0-9]{1,11}$/, "Invalid Steam ID")
+    .matches(/^STEAM_[0-5]:[01]:[0-9]{1,11}$/, "Invalid Steam ID"),
 });
 
 const SearchForm = () => {
   const { setSearchId, setResultTitle } = useGlobalContext();
   const searchText = useRef("");
   const navigate = useNavigate();
-  const [hint, setHint] = useState('');
+  const [hint, setHint] = useState("");
 
   const {
     register,
@@ -31,19 +31,21 @@ const SearchForm = () => {
 
   useEffect(() => searchText.current.focus(), []);
 
+  const onFocusHandler = () => {
+    setHint("");
+  };
+  
   const onSubmitHandler = (e) => {
     let tempSearchId = searchText.current.value.trim();
-    // if()
     const isValid = schema.isValidSync({ steamid: tempSearchId });
-    console.log(isValid); // Log the validation result
-    
+    console.log(isValid); 
+
     if (isValid) {
       setSearchId(searchText.current.value);
       reset();
       navigate(`/sprawdz/${tempSearchId}`);
     } else {
-      // Handle the case where the input is not valid
-      setHint('Niewłaściwy format Steam ID.');
+      setHint("Niewłaściwy format Steam ID.");
     }
   };
 
@@ -63,8 +65,12 @@ const SearchForm = () => {
                 placeholder="STEAM_0:1:3269899"
                 required
                 ref={searchText}
+                onFocus={onFocusHandler}
               />
-              <span className="tooltipText" data-tip={hint !== '' ? hint : ""}></span>
+              <span
+                className="tooltipText"
+                data-tip={hint !== "" ? hint : ""}
+              ></span>
               {/* <p>{errors.steamid?.message}</p> */}
               <button type="submit" className="btn">
                 Sprawdź

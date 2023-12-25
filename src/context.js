@@ -51,7 +51,6 @@ const AppProvider = ({ children }) => {
         default:
           break;
       }
-
       setLoading(false);
     } catch (error) {
       console.log(error);

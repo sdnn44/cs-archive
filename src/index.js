@@ -6,8 +6,7 @@ import { AppProvider } from "./context";
 import Home from "./pages/Home/Home";
 import About from "./pages/About/About";
 import Header from "./components/Header/Header";
-import PlayerStatus from "./components/PlayerList/PlayerInformation/PlayerStatus";
-import BanList from "./components/PlayerList/PlayerInformation/WebsiteBans/BanList";
+import { PlayerDetails } from "./components/PlayerList/PlayerDetails";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 
@@ -19,7 +18,7 @@ root.render(
           <Route index element={<Header />} />
           <Route path="about" element={<About />} />
         </Route>
-        <Route path="/sprawdz/:steamID" element={<><BanList /><PlayerStatus /></>} />
+        <Route path="/sprawdz/:steamID" element={<PlayerDetails />} />
       </Routes>
     </BrowserRouter>
   </AppProvider>

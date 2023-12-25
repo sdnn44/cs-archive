@@ -59,7 +59,30 @@
     color: #7a7a8c;
 }
 
-.card-container::-webkit-scrollbar {
+/* ===== Scrollbar CSS ===== */
+  /* Firefox */
+  * {
+    scrollbar-width: none;
+    scrollbar-color: #8f54a0 #b0abab;
+  }
+
+  /* Chrome, Edge, and Safari */
+  .card-container::-webkit-scrollbar {
+    width: 7px;
+    height: 5px;
+  }
+
+  .card-container::-webkit-scrollbar-track {
+    background: #b0abab;
+  }
+
+  .card-container::-webkit-scrollbar-thumb {
+    background-color: #8f54a0;
+    border-radius: 0px;
+    border: 3px none #ffffff;
+  }
+
+/* .card-container::-webkit-scrollbar {
     width: 1px;
     height: 10px;
 }
@@ -72,7 +95,7 @@
 
 .card-container::-webkit-scrollbar-track {
     background: linear-gradient(90deg,#201c29,#201c29 1px,#17141d 0,#17141d);
-}
+} */
 
 .card:hover {
     transform: translateY(-1rem);

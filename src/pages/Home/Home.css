@@ -13,6 +13,7 @@ section {
 }
 .home .home-content {
     max-width: 44rem;
+    z-index: 1;
 }
 .home-content h3 {
     font-size: 3.2rem;
@@ -26,7 +27,8 @@ section {
 }
 
 .home-content p {
-    font-size: 1.6rem;
+   opacity: 0.8;
+   font-size: 2rem;
 }
 
 .btn {
@@ -48,29 +50,62 @@ section {
     cursor: pointer;
 }
 .container {
+    display: flex;
+    justify-content: center;
     position: absolute;
     /* top: 0; */
-    top: 41%;
+    top: 42%;
     right: 0;
     transform: translateY(-50%);
     width: 768px;
-    height: 768px;
-    overflow: hidden;
+    min-height: 100vh;
+    /* height: 100%; */
+    /* overflow: hidden; */
     pointer-events: none;
     /* border-radius: 50%;
     display: flex;
     justify-content: center;
     align-items: center; */
+    /* z-index: 1; */
 }
-
+.container .background-image {
+    z-index: 1;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    /* height: 100vh; */
+    overflow: hidden;
+}
+.container .background-image img.parallax {
+    /* width: 80%; */
+    height: 75%;
+    -webkit-mask-image: linear-gradient(to bottom, rgba(0, 0, 0, 1) 80%, rgba(0, 0, 0, 0) 100%);
+    mask-image: linear-gradient(to bottom, rgba(0, 0, 0, 1) 80%, rgba(0, 0, 0, 0) 100%);
+    transform-origin: center bottom;
+    transition: transform .5s linear;
+}
+.container .background-image img.parallax.active {
+    transform: translateY(-10%);
+}
 .overlay {
+    z-index: -1;
     position: absolute;
     top: 0;
     right: 0;
     width: 0;
     height: 0;
-    border-top: 384px solid var(--main-color);
-    border-right: 384px solid var(--main-color);
-    border-bottom: 384px solid var(--white-color);
+    border-top: 384px solid #412265;
+    border-right: 384px solid #412265;
+    border-bottom: 664px solid #412265;
     border-left: 384px solid var(--white-color);
+    /* background: #412265;
+    background-image: radial-gradient(circle, rgba(65, 34, 101, 1) 35%, rgba(35, 19, 56, 1) 70%); */
 }
+/* .caution-banner {
+    width: 600px;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: flex-end;
+    z-index: 1;
+} */

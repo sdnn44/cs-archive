@@ -1,0 +1,90 @@
+.player-amount-container {
+    width: 90vw;
+    padding: 2rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+.player-amount, .website-amount {
+    display: flex;
+    flex-direction: row;
+    padding: 1rem;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 2rem;
+}
+.pulse {
+    height: 4rem;
+    width: 4rem;
+    background: linear-gradient(
+        #5bbe49,
+        #3ced1d
+    );
+    /* position: absolute;
+    margin: auto;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    top: 0; */
+    position: relative;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1;
+}
+.pulse:before,
+.pulse:after {
+    content: "";
+    position: absolute;
+    width: 80%;
+    height: 80%;
+    background-color: #5bbe49;
+    border-radius: 50%;
+    z-index: -1;
+    opacity: .7;
+}
+.pulse:before {
+    animation: pulse 2s ease-out infinite;
+}
+.pulse:after {
+    animation: pulse 2s 1s ease-out infinite;
+}
+@keyframes pulse {
+    100% {
+        transform: scale(2);
+        opacity: 0;
+    }
+}
+.MuiSvgIcon-root {
+    font-size: 3.6rem;
+}
+.player-amount-text, .website-amount-text {
+    margin-left: 2rem;
+    font-size: 3rem;
+}
+/* .player-amount-text span, .website-amount-text span{
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+} */
+
+.player-amount-text .count, .website-amount-text .count {
+    display: flex;
+    flex-direction: column;
+    font-weight: 600;
+    margin-bottom: -1.5rem;
+    background: linear-gradient(45deg, #ffab40 0%, #ff7043 25%, #ff5722 50%, #ff4081 75%, #7e57c2 100%);
+    background-size: 400%;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: glow 15s linear infinite;
+}
+@keyframes glow {
+    0% {
+        background-position: 0%;
+    }
+    100% {
+        background-position: 100%;
+    }
+}

@@ -19,6 +19,7 @@ const PlayerStatus = () => {
           <GameDetails />
         </>
       )}
+      
     </div>
   );
 };
