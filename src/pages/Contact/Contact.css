@@ -1,0 +1,98 @@
+.contact {
+    min-width: 100vw;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(35, 19, 56, 1);
+    color: var(--white-color);
+    /* padding-top: 12rem; */
+}
+.ornament-section {
+    margin-top: 0;
+    width: 100%;
+}
+.contact h1 {
+    font-size: 2.8rem;
+    letter-spacing: 3px;
+    opacity: 50%;
+    font-weight: 400;
+    text-transform: uppercase;
+    margin-top: 15rem;
+}
+.heading {
+    margin-bottom: 3rem;
+    margin-top: 5rem;
+    font-size: 3.5rem;
+    font-weight: 600;
+}
+.heading span {
+    /* text-decoration: underline; */
+    border-bottom: 2px solid #a308eba9;
+    display: inline-block;
+    line-height: 0.85;
+}
+.steam-profile-link {
+    margin-bottom: 1rem;
+}
+.contact form {
+    max-width: 70rem;
+    width: 60rem;
+    margin: 1rem auto;
+    text-align: center;
+    margin-bottom: 3rem;
+}
+.contact form .input-box {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: wrap;
+
+}
+.contact form .input-box input, 
+.contact form textarea {
+    width: 100%;
+    /* height: 8rem; */
+    padding: 1.7rem;
+    font-size: 1.6rem;
+    color: #fff;
+    background-color: rgba(65, 34, 101, 1);
+    border: none; 
+    border-bottom: 2px solid transparent; 
+    margin: 0.7rem 0.3rem; 
+    transition: border-bottom 0.3s ease-in-out; 
+}
+.contact form .input-box input:hover, 
+.contact form textarea:hover,
+.contact form .input-box input:focus, 
+.contact form textarea:focus { 
+    border-bottom: 2px solid #a308eba9;
+}
+.contact form textarea {
+    width: 99%;
+    resize: none;
+}
+.steam-profile-link {
+    max-width: 70rem;
+    width: 60rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    padding: 1rem;
+}
+.steam-profile-link a {
+    font-size: 1.5rem;
+    text-decoration: none;
+    color: white;
+}
+.input-box .btn:hover {
+    background: rgba(65, 34, 101, 0.839);
+    transition: .3s ease-in-out;
+    border-bottom: 2px solid transparent !important; 
+}
+.footer-section {
+    margin-top: auto;
+    width: 100%;
+    height: 10rem;
+}

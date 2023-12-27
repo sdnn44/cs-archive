@@ -33,8 +33,8 @@ const AppProvider = ({ children }) => {
         case ENDPOINTS.player:
           const searchedPlayer = data.response.players[0];
           setPlayer(searchedPlayer);
-          if (searchedPlayer) setResultTitle("The player you are looking for has been found");
-          else setResultTitle("Player not found");
+          // if (searchedPlayer) setResultTitle("The player you are looking for has been found");
+          // else setResultTitle("Player not found");
           break;
         case ENDPOINTS.steamBans:
           const getPlayerBans = data.players[0];

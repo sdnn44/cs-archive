@@ -17,8 +17,8 @@
     height: 4rem;
     width: 4rem;
     background: linear-gradient(
-        #5bbe49,
-        #3ced1d
+        #a308eb,
+        #a308eb
     );
     /* position: absolute;
     margin: auto;
@@ -39,7 +39,7 @@
     position: absolute;
     width: 80%;
     height: 80%;
-    background-color: #5bbe49;
+    background-color: #a308eb;
     border-radius: 50%;
     z-index: -1;
     opacity: .7;

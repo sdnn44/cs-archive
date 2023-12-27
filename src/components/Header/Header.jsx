@@ -1,11 +1,13 @@
 import React from "react";
+import Ornament from "../Ornament/Ornament";
 import { PlayerAmount } from "../Playerbase/PlayerAmount";
 import SearchForm from "../SearchForm/SearchForm";
 import "./Header.css";
 
 const Header = () => {
   return (
-    <div className="header-container">
+    <div className="header-container" id="inspect-player">
+      <Ornament />
       <header className="header-box">
         <div className="header-content">
           <h2 className="header-title">

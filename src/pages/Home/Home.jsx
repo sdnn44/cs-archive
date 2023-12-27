@@ -1,8 +1,9 @@
 import React, { useEffect, useState } from "react";
 import Header from "../../components/Header/Header";
-import { Link, Outlet } from "react-router-dom";
+import { Outlet } from "react-router-dom";
 import Navbar from "../../components/Navbar/Navbar";
 import "./Home.css";
+import { Link, animateScroll as scroll } from "react-scroll";
 
 const Home = () => {
   const [scrollPosition, setScrollPosition] = useState(0);
@@ -34,7 +35,7 @@ const Home = () => {
             może sprawdzić, czy została nałożona blokada permanentna na to konto
             w przeszłości i trwa do dziś.
           </p>
-          <Link to="/sprawdz" className="btn">
+          <Link to="inspect-player" spy={true} smooth={true} duration={10} className="btn">
             Sprawdź gracza
           </Link>
         </div>
