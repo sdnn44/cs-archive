@@ -9,7 +9,7 @@ const Footer = () => {
             <p>Copyright &copy; 2023 by slajdenXD | All rights reserved.</p>
         </div>
         <div className="footer-iconTop">
-            <a href='#home'><ArrowUpwardIcon sx={{ fontSize: "3rem" }}/></a>
+            <a href='#home'><ArrowUpwardIcon sx={{ fontSize: "2rem" }}/></a>
         </div>
     </footer>
   )

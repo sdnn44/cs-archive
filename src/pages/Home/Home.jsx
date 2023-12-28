@@ -1,5 +1,4 @@
 import React, { useEffect, useState } from "react";
-import Header from "../../components/Header/Header";
 import { Outlet } from "react-router-dom";
 import Navbar from "../../components/Navbar/Navbar";
 import "./Home.css";
@@ -22,7 +21,6 @@ const Home = () => {
   return (
     <main>
       <Navbar />
-      {/* <Header /> */}
       <section className="home" id="home">
         <div className="home-content">
           <h3>Once a cheater, always a</h3>

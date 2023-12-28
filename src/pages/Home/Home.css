@@ -109,3 +109,37 @@ section {
     align-items: flex-end;
     z-index: 1;
 } */
+
+@media (max-width: 1279px) {
+    .container .background-image img.parallax {
+        height: 55%;
+    }
+}
+@media (max-width: 1090px) {
+    .home {
+        background: #412265;
+        color: #fff;
+    }
+    .overlay {
+        border: none;
+    }
+}
+@media (max-width: 950px) {
+    .container .background-image img.parallax {
+        display: none;
+    }
+}
+@media (max-width: 600px) {
+    .home-content h3 {
+        font-size: 3rem;
+    }
+    
+    .home-content h1 {
+        font-size: 5rem;
+    }
+    
+    .home-content p {
+       font-size: 1.7rem;
+    }
+    
+}

@@ -72,7 +72,7 @@ const SearchForm = () => {
                 data-tip={hint !== "" ? hint : ""}
               ></span>
               {/* <p>{errors.steamid?.message}</p> */}
-              <button type="submit" className="btn">
+              <button type="submit" className="btn" id="check-button">
                 Sprawdź
               </button>
             </div>

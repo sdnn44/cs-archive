@@ -8,7 +8,7 @@
 }
 .search-form-elem {
     padding: .1rem 4rem;
-    border-radius: 5rem;
+    border-radius: 1rem;
     display: flex;
     justify-content: space-between;
     background-color: var(--white-color);
@@ -64,4 +64,64 @@
     left: 0;
     right: 0;
     bottom: 8.5em;
+}
+@media (max-width: 750px) {
+    .search-form-elem .form-control {
+        font-size: 1.7rem;
+    }
+    #check-button {
+        font-size: 1.2rem;
+    }
+}
+
+@media (max-width: 600px) {
+    .search-form-elem .form-control {
+        font-size: 1.5rem;
+    }
+    #check-button {
+        font-size: 1.1rem;
+    }
+}
+@media (max-width: 545px) {
+    #check-button {
+        font-size: .8rem;
+        margin: 1.7rem 0;
+        padding: 1rem 2rem;
+    }
+}
+@media (max-width: 510px) {
+    .search-form-elem .form-control {
+        font-size: 1.1rem;
+    }
+    #check-button {
+        font-size: .8rem;
+        margin: 1rem 0;
+        padding: 1rem 1.6rem;
+    }
+}
+@media (max-width: 450px) {
+    .search-form-elem .form-control {
+        font-size: .9rem;
+    }
+    #check-button {
+        font-size: .8rem;
+        margin: .5rem 0;
+        padding: 1rem;
+    }
+    .search-form-elem {
+        padding: .1rem 2rem;
+    }
+}
+@media (max-width: 375px) {
+    .search-form-elem .form-control {
+        font-size: .7rem;
+    }
+    #check-button {
+        font-size: .6rem;
+        margin: .5rem 0;
+        padding: .6rem;
+    }
+    .search-form-elem {
+        padding: .1rem 3rem;
+    }
 }

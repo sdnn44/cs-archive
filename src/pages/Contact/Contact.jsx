@@ -21,6 +21,7 @@ const Contact = () => {
         <a
           href="https://steamcommunity.com/profiles/76561197966805527"
           target="_blank"
+          rel="noreferrer"
         >
           {" "}
           https://steamcommunity.com/profiles/76561197966805527{" "}

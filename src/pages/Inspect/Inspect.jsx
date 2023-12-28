@@ -1,17 +1,17 @@
 import React from "react";
-import Ornament from "../Ornament/Ornament";
-import { PlayerAmount } from "../Playerbase/PlayerAmount";
-import SearchForm from "../SearchForm/SearchForm";
-import "./Header.css";
+import Ornament from "../../components/Ornament/Ornament";
+import { PlayerAmount } from "../../components/Playerbase/PlayerAmount";
+import SearchForm from "../../components/SearchForm/SearchForm";
+import "./Inspect.css";
 
-const Header = () => {
+const Inspect = () => {
   return (
     <div className="header-container" id="inspect-player">
       <Ornament />
       <header className="header-box">
         <div className="header-content">
           <h2 className="header-title">
-            znajdź aktywne bany gracza z sieci serwerów
+            Znajdź aktywne bany gracza z sieci serwerów
           </h2>{" "}
           <br />
           <div className="box">
@@ -34,4 +34,4 @@ const Header = () => {
   );
 };
 
-export default Header;
+export default Inspect;
