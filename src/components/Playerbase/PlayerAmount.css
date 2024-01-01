@@ -111,3 +111,18 @@
         margin-bottom: -1rem;
     }
 }
+@media (max-width: 375px) {
+    .player-amount-text, .website-amount-text {
+        font-size: 1.5rem;
+    }
+    .player-amount-text .count, .website-amount-text .count {
+        margin-bottom: -1rem;
+    }
+    .pulse {
+        height: 3rem;
+        width: 3rem;  
+    }
+    .MuiSvgIcon-root {
+        font-size: 2.5rem !important;
+    }
+}

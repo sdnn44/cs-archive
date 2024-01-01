@@ -22,10 +22,6 @@ export const UserInformation = (user) => {
         {player?.realname ? player.realname : `brak informacji`}
       </p>
       <p>
-        <span>Skąd:</span>{" "}
-        {player?.loccityid ? player.loccityid : `brak informacji`}
-      </p>
-      <p>
         <span>Konto utworzone:</span>{" "}
         {player?.timecreated
           ? unixTimestampToDateTime(player?.timecreated)

@@ -7,3 +7,10 @@
     background-color: #17141d;
     color: white;
 }
+@media (max-width: 1210px) {
+    .player-container {
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+}

@@ -9,7 +9,7 @@ const BanInfo = ({ title, status, iconColor }) => (
     <span style={{ color: status !== false ? "red" : "green" }}>
       {status === false ? ` brak banów` : ` nałożone bany`}
     </span>
-    <GavelIcon color={iconColor} />
+    <GavelIcon color={iconColor} id="gavel"/>
   </p>
 );
 

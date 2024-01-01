@@ -16,7 +16,7 @@ export const PlayerAmount = () => {
         <div className="pulse">
           <LanguageIcon sx={{fontSize: "3.5rem"}} />
         </div>{" "}
-        <div className="website-amount-text"><div className="count">15</div> sieci serwerów</div>
+        <div className="website-amount-text"><div className="count">15</div> sieci</div>
       </div>
     </div>
   );

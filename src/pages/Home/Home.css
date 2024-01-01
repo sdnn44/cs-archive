@@ -143,3 +143,35 @@ section {
     }
     
 }
+@media (max-width: 510px) {
+    .home-content h3 {
+        font-size: 2.4rem;
+    }
+    
+    .home-content h1 {
+        font-size: 3.4rem;
+    }
+    
+    .home-content p {
+       font-size: 1.4rem;
+    }
+    #home-button {
+        font-size: 1.3rem;
+    }
+}
+@media (max-width: 375px) {
+    .home-content h3 {
+        font-size: 2.2rem;
+    }
+    
+    .home-content h1 {
+        font-size: 3.1rem;
+    }
+    
+    .home-content p {
+       font-size: 1.3rem;
+    }
+    #home-button {
+        font-size: 1.2rem;
+    }
+}

@@ -10,3 +10,20 @@
     margin: 0 0.4rem 0 0;
     font-weight: 600;
 }
+@media (max-width: 720px) {
+    .ban-otherview {
+        border-bottom: 1px solid;
+        border-image-slice: 1;
+        border-image-source: linear-gradient(90deg,#9356c5,#1b0d5f);
+    }
+}
+@media (max-width: 450px) {
+    .ban-otherview span  {
+        font-size: 1.1rem;
+    }
+}
+@media (max-width: 375px) {
+    #gavel  {
+        display: none;
+    }
+}

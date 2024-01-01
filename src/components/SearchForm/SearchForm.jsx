@@ -19,7 +19,7 @@ const SearchForm = () => {
   const searchText = useRef("");
   const navigate = useNavigate();
   const [hint, setHint] = useState("");
-
+  
   const {
     register,
     handleSubmit,

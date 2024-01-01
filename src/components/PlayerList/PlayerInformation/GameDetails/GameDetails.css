@@ -37,4 +37,14 @@
     width: 200px;
 }
 
-
+@media (max-width: 1210px) {
+    .player-playtime-details {
+        max-width: 70rem;
+        width: 90%;
+    }
+}
+@media (max-width: 550px) {
+    .player-playtime-details {
+        height: 60rem;
+    }
+}

@@ -26,6 +26,7 @@
     margin-top: 5rem;
     font-size: 3.5rem;
     font-weight: 600;
+    text-align: center;
 }
 .heading span {
     /* text-decoration: underline; */
@@ -134,5 +135,36 @@
     }
     .heading {
         font-size: 2rem;
+    }
+    .steam-profile-link a {
+        font-size: 1.1rem;
+    }
+    .steam-profile-link {
+        width: 45rem;
+    }
+}
+@media (max-width: 510px) {
+    .steam-profile-link {
+       flex-direction: column;
+    }
+    .steam-profile-link a{
+        margin-top: 1rem;
+    }
+    .contact form .input-box input, 
+    .contact form textarea {
+        font-size: 1.3rem;
+    }
+}
+@media (max-width: 375px) {
+    .contact h1 {
+        font-size: 1.8rem;
+    }
+    .heading {
+        font-size: 1.8rem;
+    }
+}
+@media (max-width: 375px) {
+    .steam-profile-link a {
+        font-size: .9rem;
     }
 }

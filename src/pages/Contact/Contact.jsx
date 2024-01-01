@@ -1,10 +1,27 @@
-import React from "react";
+import React, { useRef } from "react";
 import "./Contact.css";
 import LaunchIcon from "@mui/icons-material/Launch";
 import Ornament from "../../components/Ornament/Ornament";
 import Footer from "../../components/Footer/Footer";
+
+import emailjs from '@emailjs/browser';
+
+
 const Contact = () => {
-  console.log("contact");
+
+  const form = useRef();
+
+  const sendEmail = (e) => {
+    e.preventDefault();
+
+    emailjs.sendForm('YOUR_SERVICE_ID', 'YOUR_TEMPLATE_ID', form.current, 'YOUR_PUBLIC_KEY')
+      .then((result) => {
+          console.log(result.text);
+      }, (error) => {
+          console.log(error.text);
+      });
+  };
+
   return (
     <div className="contact" id="contact">
       <div className="ornament-section">
@@ -27,10 +44,10 @@ const Contact = () => {
           https://steamcommunity.com/profiles/76561197966805527{" "}
         </a>
       </div>
-      <form action="#">
+      <form ref={form} onSubmit={sendEmail}>
         <div className="input-box">
-          <input type="text" placeholder="Nick" />
-          <input type="email" placeholder="Email" />
+          <input type="text" placeholder="Nick" name="user_name"/>
+          <input type="email" placeholder="Email" name="user_email"/>
         </div>
         <div className="input-box">
           <input type="text" placeholder="Temat" />
@@ -38,9 +55,9 @@ const Contact = () => {
         {/* <div className="input-box">
                 <input type="email" placeholder="Wiadomość" />
             </div> */}
-        <textarea name="" id="" cols="10" rows="1" placeholder="Wiadomość" />
+        <textarea name="message" id="" cols="10" rows="1" placeholder="Wiadomość" />
         <div className="input-box">
-          <input type="submit" value="Wyślij" className="btn" />
+          <input type="submit" className="btn" value="Send"/>
         </div>
       </form>
       <div className="footer-section">

@@ -36,3 +36,8 @@
 .player-information-avatar img.grey {
     border-bottom: 2px solid grey;
 }
+@media (max-width: 450px) {
+    .player-name-status h2 {
+        font-size: 1.8rem;
+    } 
+}

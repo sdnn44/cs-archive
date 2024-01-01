@@ -55,3 +55,8 @@
     margin: 0 2rem;
     font-weight: 600;
 }
+@media (max-width: 550px) {
+    .other-activity-game-container {
+        flex-direction: column;
+    }
+}

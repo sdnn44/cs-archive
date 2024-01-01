@@ -3,6 +3,7 @@ import { Outlet } from "react-router-dom";
 import Navbar from "../../components/Navbar/Navbar";
 import "./Home.css";
 import { Link, animateScroll as scroll } from "react-scroll";
+import { Fade } from "react-awesome-reveal";
 
 const Home = () => {
   const [scrollPosition, setScrollPosition] = useState(0);
@@ -22,28 +23,37 @@ const Home = () => {
     <main>
       <Navbar />
       <section className="home" id="home">
-        <div className="home-content">
-          <h3>Once a cheater, always a</h3>
-          <h1>cheater</h1>
-          <br />
-          <p className="home-text">
-            Aplikacja pozwala na sprawdzenie Steam_ID gracza pod kątem banów za
-            oszukiwanie. Strona zawiera listę banów z najpopularniejszych
-            polskich sieci serwerów. Użytkownik na podstawie Steam_ID gracza
-            może sprawdzić, czy została nałożona blokada permanentna na to konto
-            w przeszłości i trwa do dziś.
-          </p>
-          <Link to="inspect-player" spy={true} smooth={true} duration={10} className="btn">
-            Sprawdź gracza
-          </Link>
-        </div>
+          <div className="home-content">
+        <Fade triggerOnce direction="down" duration={500}>
+            <h3>Once a cheater, always a</h3>
+            <h1>cheater</h1>
+            <br />
+            <p className="home-text">
+              Aplikacja pozwala na sprawdzenie Steam_ID gracza pod kątem banów
+              za oszukiwanie. Strona zawiera listę banów z najpopularniejszych
+              polskich sieci serwerów. Użytkownik na podstawie Steam_ID gracza
+              może sprawdzić, czy została nałożona blokada permanentna na to
+              konto w przeszłości i trwa do dziś.
+            </p>
+            <Link
+              to="inspect-player"
+              spy={true}
+              smooth={true}
+              duration={10}
+              className="btn"
+              id="home-button"
+            >
+              Sprawdź gracza
+            </Link>
+        </Fade>
+          </div>
         <div className="container">
           <div className="background-image">
-            <img
-              className={`parallax ${scrollPosition > 0 ? 'active' : ''}`}
-              src={require("./../../images/terrorist-background.png")}
-              alt="background"
-            />
+              <img
+                className={`parallax ${scrollPosition > 0 ? "active" : ""}`}
+                src={require("./../../images/terrorist-background.png")}
+                alt="background"
+              />
             <div className="overlay"></div>
           </div>
         </div>
