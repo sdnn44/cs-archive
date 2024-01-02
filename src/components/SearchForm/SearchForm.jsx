@@ -7,6 +7,8 @@ import "./SearchForm.css";
 import { useForm } from "react-hook-form";
 import { yupResolver } from "@hookform/resolvers/yup";
 import * as yup from "yup";
+import { Snackbar } from "@mui/material";
+import MuiAlert from "@mui/material/Alert";
 
 const schema = yup.object().shape({
   steamid: yup
@@ -19,7 +21,20 @@ const SearchForm = () => {
   const searchText = useRef("");
   const navigate = useNavigate();
   const [hint, setHint] = useState("");
-  
+
+  const [open, setOpen] = useState(false);
+
+  const Alert = React.forwardRef(function Alert(props, ref) {
+    return <MuiAlert elevation={6} ref={ref} variant="filled" sx={{zIndex: 'tooltip' }}{...props} />;
+  });
+
+  const handleClose = (event, reason) => {
+    if (reason === "clickaway") {
+      return;
+    }
+    setOpen(false);
+  };
+
   const {
     register,
     handleSubmit,
@@ -34,18 +49,19 @@ const SearchForm = () => {
   const onFocusHandler = () => {
     setHint("");
   };
-  
+
   const onSubmitHandler = (e) => {
     let tempSearchId = searchText.current.value.trim();
     const isValid = schema.isValidSync({ steamid: tempSearchId });
-    console.log(isValid); 
+    console.log(isValid);
 
     if (isValid) {
       setSearchId(searchText.current.value);
       reset();
       navigate(`/sprawdz/${tempSearchId}`);
     } else {
-      setHint("Niewłaściwy format Steam ID.");
+      setOpen(true);
+      // setHint("Niewłaściwy format Steam ID.");
     }
   };
 
@@ -67,10 +83,23 @@ const SearchForm = () => {
                 ref={searchText}
                 onFocus={onFocusHandler}
               />
-              <span
+              <Snackbar
+                open={open}
+                autoHideDuration={3000}
+                onClose={handleClose}
+              >
+                <Alert
+                  onClose={handleClose}
+                  severity="error"
+                  sx={{ width: "100%", fontSize: 13, zIndex: 'tooltip' }}
+                >
+                  Nieprawidłowy format SteamID!
+                </Alert>
+              </Snackbar>
+              {/* <span
                 className="tooltipText"
                 data-tip={hint !== "" ? hint : ""}
-              ></span>
+              ></span> */}
               {/* <p>{errors.steamid?.message}</p> */}
               <button type="submit" className="btn" id="check-button">
                 Sprawdź
