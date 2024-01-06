@@ -2,7 +2,7 @@ import React, { useState, useContext, useEffect } from "react";
 import { useCallback } from "react";
 import { steamIDtoSteam64 } from "./utils/steamid-conventer";
 
-const BASE_URL = "http://localhost:3001/api/";
+const BASE_URL = "https://cs-archive-server.vercel.app/api/";
 const ENDPOINTS = {
   player: "player",
   steamBans: "steambans",
