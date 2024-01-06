@@ -1,4 +1,4 @@
-import { child, get, onValue, ref } from "firebase/database";
+import { child, get, ref } from "@firebase/database";
 import React, { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import { useGlobalContext } from "../../../../context";
