@@ -12,7 +12,7 @@ const APIkey = process.env.REACT_APP_STEAM_API_KEY;
 app.use(express.json());
 app.use(
   cors({
-    origin: ["https://cs-archive-backend.vercel.app"],
+    origin: ["https://cs-archive.vercel.app"],
     methods: ["GET,HEAD,PUT,PATCH,POST,DELETE"],
     credentials: true,
   })
