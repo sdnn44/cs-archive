@@ -2,6 +2,7 @@ import express, { json } from "express";
 import fetch from "node-fetch";
 import dotenv from 'dotenv';
 import cors from "cors";
+import bodyParser from "body-parser";
 
 const app = express();
 const PORT = process.env.PORT || 3001;
@@ -9,7 +10,7 @@ const PORT = process.env.PORT || 3001;
 dotenv.config();
 const APIkey = process.env.REACT_APP_STEAM_API_KEY;
 
-app.use(express.json());
+app.use(bodyParser.json());
 app.use(
   cors({
     origin: ["https://cs-archive.vercel.app"],
