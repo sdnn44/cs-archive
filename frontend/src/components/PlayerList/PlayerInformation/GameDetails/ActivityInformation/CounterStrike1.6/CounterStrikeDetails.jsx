@@ -21,7 +21,7 @@ export const CounterStrikeDetails = () => {
           {hasPlaytime2Weeks
             ? calculateRoundedPlaytime(playerGames.games[0].playtime_2weeks)
             : "brak "}
-          godz. w ciągu ostatnich 2 tygodni
+          {" "} godz. w ciągu ostatnich 2 tygodni
         </div>
       </div>
       <div className="recently-games">
@@ -41,7 +41,7 @@ export const CounterStrikeDetails = () => {
               {hasPlaytimeForever
                 ? calculateRoundedPlaytime(playerGames.games[0].playtime_forever)
                 : "brak "}
-              {" "}godz. łącznie
+              {" "} godz. łącznie
             </p>
             <p>
               <span>Ostatnia gra:</span>{" "}

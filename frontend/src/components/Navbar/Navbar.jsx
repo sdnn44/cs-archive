@@ -8,9 +8,15 @@ import { Link, animateScroll as scroll } from "react-scroll";
 const Navbar = () => {
   return (
     <header className="header">
-      <a href="#" className="logo">
-        cs-archive
-      </a>
+      <div className="logo-container">
+        <a href="#" className="logo">
+          cs
+        </a>
+        <img src={require("../../images/logo.png")} alt="logo" />
+        <a href="#" className="logo">
+          archive
+        </a>
+      </div>
       <input type="checkbox" id="check" />
       <label for="check" className="icons">
         <MenuIcon fontSize="large" id="menu-icon" />

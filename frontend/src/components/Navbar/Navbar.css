@@ -1,9 +1,16 @@
+@font-face {
+    font-family: 'ALGEON trial Regular';
+    font-style: normal;
+    font-weight: normal;
+    src: local('ALGEON trial Regular'), url('../../../public/AlgeontrialRegular-K7YK7.woff') format('woff');
+    }
+
 .header {
     position: fixed;
     top: 0;
     left: 0;
     width: 100vw;
-    padding: 2rem 7%;
+    padding: 0rem 7%;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -23,12 +30,23 @@
     backdrop-filter: blur(100px);
     z-index: -1;
 }
+.logo-container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+.logo-container img {
+    width: 100px;
+    height: 100px;
+    display: flex;
+    text-align: center;
+    cursor: pointer;
+}
 .logo {
-    font-size: 2.5rem;
-    color: var(--main-color);
-    font-weight: 600;
-    cursor: default;
-    /* margin-right: auto; */
+    font-family: 'ALGEON trial Regular';
+    font-weight: normal;
+    font-size: 42px;
+    text-decoration: none;
 }
 .navbar a {
     position: relative;
@@ -53,6 +71,16 @@
     display: none;
     position: absolute;
     right: 5%;
+}
+@media (max-width: 1090px) {
+    .logo {
+        font-size: 36px;
+        color: white;
+    }
+    .logo-container img {
+        width: 75px;
+        height: 75px;
+    }
 }
 @media (max-width: 992px) {
     .header {

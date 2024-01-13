@@ -8,7 +8,6 @@ import { OtherGamesDetailsMock } from "./OtherGamesDetailsMock";
 
 const GameSection = ({ game, playerGames }) => {
   const { name, logo, index } = game;
-  console.log(index);
   return (
     <div className="other-activity-game-container">
       {playerGames.games[index] ? (

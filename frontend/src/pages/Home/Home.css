@@ -30,7 +30,9 @@ section {
    opacity: 0.8;
    font-size: 2rem;
 }
-
+.home-text span {
+    font-weight: 700;
+}
 .btn {
     display: inline-block;
     padding: 1.2rem 2.8rem;

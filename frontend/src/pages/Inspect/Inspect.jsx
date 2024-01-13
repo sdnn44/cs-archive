@@ -18,10 +18,11 @@ const Inspect = () => {
             <div className="search-box">
               <div className="search-box-text">
                 <p className="header-text">
-                  Convert words to images with Fotor's free AI image generator.
-                  Watch your imagination transform into AI-generated images
-                  online. Free text to image AI generator, save time on creating
-                  or searching for the perfect image.
+                  Wszystkie bany w jednym miejscu. Wprowadź identyfikator Steam
+                  w poniższym pasku wyszukiwania, aby uzyskać dostęp do
+                  historycznych danych tego użytkownika. Znalezione informacje
+                  obejmują historię banów z najpopularniejszych sieci serwerów,
+                  kluczowe informacje o koncie oraz dane związane z grami.
                 </p>
               </div>
               <SearchForm />

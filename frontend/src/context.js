@@ -27,8 +27,6 @@ const AppProvider = ({ children }) => {
       setLoading(true);
       const response = await fetch(`${BASE_URL}${endpoint}?steamid=${steam64}`);
       const data = await response.json();
-      console.log(data);
-
       switch (endpoint) {
         case ENDPOINTS.player:
           const searchedPlayer = data.response.players[0];

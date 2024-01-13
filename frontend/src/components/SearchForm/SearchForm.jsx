@@ -20,7 +20,7 @@ const SearchForm = () => {
   const { setSearchId, setResultTitle } = useGlobalContext();
   const searchText = useRef("");
   const navigate = useNavigate();
-  const [hint, setHint] = useState("");
+  // const [hint, setHint] = useState("");
 
   const [open, setOpen] = useState(false);
 
@@ -44,16 +44,11 @@ const SearchForm = () => {
     resolver: yupResolver(schema),
   });
 
-  useEffect(() => searchText.current.focus(), []);
-
-  const onFocusHandler = () => {
-    setHint("");
-  };
+  // useEffect(() => searchText.current.focus(), []);
 
   const onSubmitHandler = (e) => {
     let tempSearchId = searchText.current.value.trim();
     const isValid = schema.isValidSync({ steamid: tempSearchId });
-    console.log(isValid);
 
     if (isValid) {
       setSearchId(searchText.current.value);
@@ -61,7 +56,6 @@ const SearchForm = () => {
       navigate(`/sprawdz/${tempSearchId}`);
     } else {
       setOpen(true);
-      // setHint("Niewłaściwy format Steam ID.");
     }
   };
 
@@ -81,7 +75,6 @@ const SearchForm = () => {
                 placeholder="STEAM_0:1:3269899"
                 required
                 ref={searchText}
-                onFocus={onFocusHandler}
               />
               <Snackbar
                 open={open}

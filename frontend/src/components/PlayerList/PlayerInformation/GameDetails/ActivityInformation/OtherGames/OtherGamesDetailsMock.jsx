@@ -27,7 +27,6 @@ export const OtherGamesDetailsMock = ({ index }) => {
   const game = gamesData[index - 1];
   if (game) {
     const { logo, name, totalPlaytime, recentPlaytime } = game;
-    console.log(totalPlaytime)
     // const totalPlaytime = playtime_forever ? calculateRoundedPlaytime(playtime_forever) + ` godz łącznie.` : "brak danych.";
     // const recentPlaytime = playtime_2weeks ? calculateRoundedPlaytime(playtime_2weeks) + ` godzin.` : "0 godzin.";
 

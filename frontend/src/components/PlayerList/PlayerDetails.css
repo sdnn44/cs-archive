@@ -1,4 +1,14 @@
 .wrapper {
     background: #17141d;
     height: 100vh;
+    overflow-y: hidden;
+}
+.arrow-back {
+    color: #8f54a0;
+    margin-left: 1rem;
+    position: absolute;
+}
+.arrow-back:hover {
+    color: #ce88e1;
+    transition: .3s ease-in-out;
 }

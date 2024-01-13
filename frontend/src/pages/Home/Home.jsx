@@ -23,17 +23,18 @@ const Home = () => {
     <main>
       <Navbar />
       <section className="home" id="home">
-          <div className="home-content">
-        <Fade triggerOnce direction="down" duration={500}>
+        <div className="home-content">
+          <Fade triggerOnce direction="down" duration={500}>
             <h3>Once a cheater, always a</h3>
             <h1>cheater</h1>
             <br />
             <p className="home-text">
-              Aplikacja pozwala na sprawdzenie Steam_ID gracza pod kątem banów
-              za oszukiwanie. Strona zawiera listę banów z najpopularniejszych
-              polskich sieci serwerów. Użytkownik na podstawie Steam_ID gracza
-              może sprawdzić, czy została nałożona blokada permanentna na to
-              konto w przeszłości i trwa do dziś.
+              Nikt nie lubi oszustów, prawda?
+              Aplikacja została stworzona z jednoznacznym celem: wspierania
+              <span> uczciwej</span> i <span> sprawiedliwej</span> rozgrywki dla szerokiej społeczności
+              graczy. Strona pozwala na sprawdzenie Steam_ID gracza pod kątem
+              banów za oszukiwanie. Użytkownik na podstawie Steam_ID gracza może
+              sprawdzić, czy na konto została nałożona aktywna blokada permanentna.
             </p>
             <Link
               to="inspect-player"
@@ -45,15 +46,15 @@ const Home = () => {
             >
               Sprawdź gracza
             </Link>
-        </Fade>
-          </div>
+          </Fade>
+        </div>
         <div className="container">
           <div className="background-image">
-              <img
-                className={`parallax ${scrollPosition > 0 ? "active" : ""}`}
-                src={require("./../../images/terrorist-background.png")}
-                alt="background"
-              />
+            <img
+              className={`parallax ${scrollPosition > 0 ? "active" : ""}`}
+              src={require("./../../images/terrorist-background.png")}
+              alt="background"
+            />
             <div className="overlay"></div>
           </div>
         </div>
