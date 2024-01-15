@@ -39,7 +39,7 @@ export const Card = ({ title, subtitle, websiteImg, data, status, href }) => {
             </p>
             <p>
               {" "}
-              <span>Zbanowany przez:</span> {data && (data["Zbanowny przez"] || data["Admin"])}{" "}
+              <span>Zbanowany przez:</span> {data && (data["Zbanowny przez"] || data["Zbanowany przez"] || data["Admin"])}{" "}
             </p>
           </>
         ) : (
