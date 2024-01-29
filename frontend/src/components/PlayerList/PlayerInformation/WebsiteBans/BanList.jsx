@@ -14,7 +14,6 @@ const fetchData = async (path, setDataFunction, id) => {
 
     if (snapshot.exists()) {
       setDataFunction(snapshot.val());
-      console.log(snapshot.val());
     } else {
       console.log("Player has no active bans");
     }

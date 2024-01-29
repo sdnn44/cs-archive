@@ -15,10 +15,8 @@ const AppContext = React.createContext();
 
 const AppProvider = ({ children }) => {
   const { steamID: urlSearchId } = useParams(); // Get searchId from URL params
-  console.log(urlSearchId);
   const storedSearchId = urlSearchId || "STEAM_0:0:84901";
   const [searchId, setSearchId] = useState(storedSearchId);
-  console.log("searchid context= " + searchId);
   const [player, setPlayer] = useState([]);
   const [playerSteamBans, setPlayerSteamBans] = useState([]);
   const [playerGames, setPlayerGames] = useState([]);
