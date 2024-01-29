@@ -11,21 +11,28 @@ import Inspect from "./pages/Inspect/Inspect";
 const root = ReactDOM.createRoot(document.getElementById("root"));
 
 root.render(
-  <AppProvider>
-    <BrowserRouter>
-      <Routes>
-        <Route
-          path="/"
-          element={
-            <>
-              <Home />
+  <BrowserRouter>
+    <Routes>
+      <Route
+        path="/"
+        element={
+          <>
+            <Home />
+            <AppProvider>
               <Inspect />
-              <Contact />
-            </>
-          }
-        />
-        <Route path="/sprawdz/:steamID" element={<PlayerDetails />} />
-      </Routes>
-    </BrowserRouter>
-  </AppProvider>
+            </AppProvider>
+            <Contact />
+          </>
+        }
+      />
+      <Route
+        path="/sprawdz/:steamID"
+        element={
+          <AppProvider>
+            <PlayerDetails />
+          </AppProvider>
+        }
+      />
+    </Routes>
+  </BrowserRouter>
 );

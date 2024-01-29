@@ -1,5 +1,6 @@
 import React, { useState, useContext, useEffect } from "react";
 import { useCallback } from "react";
+import { useParams } from "react-router-dom";
 import { steamIDtoSteam64 } from "./utils/steamid-conventer";
 
 const BASE_URL = "https://cs-archive-server.vercel.app/api/";
@@ -13,7 +14,9 @@ const ENDPOINTS = {
 const AppContext = React.createContext();
 
 const AppProvider = ({ children }) => {
-  const storedSearchId = sessionStorage.getItem("searchId") || "STEAM_0:0:84901";
+  const { steamID: urlSearchId } = useParams(); // Get searchId from URL params
+  console.log(urlSearchId);
+  const storedSearchId = sessionStorage.getItem("searchId") || urlSearchId || "STEAM_0:0:84901";
   const [searchId, setSearchId] = useState(storedSearchId);
   const [player, setPlayer] = useState([]);
   const [playerSteamBans, setPlayerSteamBans] = useState([]);
@@ -59,13 +62,22 @@ const AppProvider = ({ children }) => {
   const fetchPlayer = useCallback(() => {
     const steam64 = steamIDtoSteam64(searchId);
 
-    Object.values(ENDPOINTS).forEach((endpoint) => fetchData(endpoint, steam64));
+    Object.values(ENDPOINTS).forEach((endpoint) =>
+      fetchData(endpoint, steam64)
+    );
   }, [searchId, fetchData]);
 
   useEffect(() => {
     sessionStorage.setItem("searchId", searchId);
     fetchPlayer();
   }, [searchId, fetchPlayer]);
+
+  useEffect(() => {
+    if (urlSearchId) {
+      setSearchId(urlSearchId);
+    }
+    fetchPlayer();
+  }, [searchId, fetchPlayer, urlSearchId]);
 
   return (
     <AppContext.Provider

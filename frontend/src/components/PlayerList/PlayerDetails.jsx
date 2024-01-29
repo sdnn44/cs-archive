@@ -8,7 +8,7 @@ import ArrowBackIcon from "@mui/icons-material/ArrowBack";
 export const PlayerDetails = () => {
   const { loading } = useGlobalContext();
   return (
-    <div className="wrapper">
+    <div className="player-details-container">
       {/* {!loading ? (
         <Loading />
       ) : (
@@ -21,6 +21,7 @@ export const PlayerDetails = () => {
         <a href="https://cs-archive.vercel.app/" className="page-back">
           <ArrowBackIcon sx={{ fontSize: "3rem" }} className="arrow-back" />
         </a>
+        <span>Ostatnia aktualizacja bazy danych z banami graczy nastąpiła 29 stycznia br. o godzinie 11:58.</span>
       </div>
       <BanList />
       <PlayerStatus />

@@ -10,7 +10,7 @@ export const PlayerAmount = () => {
         <div className="pulse">
           <PersonOffIcon sx={{fontSize: "3.5rem"}}/>
         </div>{" "}
-        <div className="player-amount-text"><div className="count">2996</div> graczy</div>
+        <div className="player-amount-text"><div className="count">3020</div> graczy</div>
       </div>
       <div className="website-amount">
         <div className="pulse">

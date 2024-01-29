@@ -82,21 +82,6 @@
     border: 3px none #ffffff;
   }
 
-/* .card-container::-webkit-scrollbar {
-    width: 1px;
-    height: 10px;
-}
-
-.card-container::-webkit-scrollbar-thumb {
-    background: linear-gradient(90deg,#421964,#130c35);
-    border-radius: 10px;
-    box-shadow: inset 2px 2px 2px hsla(0,0%,100%,.25), inset -2px -2px 2px rgba(0,0,0,.25);
-}
-
-.card-container::-webkit-scrollbar-track {
-    background: linear-gradient(90deg,#201c29,#201c29 1px,#17141d 0,#17141d);
-} */
-
 .card:hover {
     transform: translateY(-1rem);
 }
@@ -163,11 +148,15 @@
     color: #7a7a8c;
 }
 
-.card-title h2:hover {
+.card-title h2 {
     background: linear-gradient(90deg,#ff8a00,#e52e71);
     text-shadow: none;
     -webkit-text-fill-color: transparent;
     -webkit-background-clip: text;
     background-clip: text;
+    transition: all .1s ease-in-out;
+}
+.card-title h2:hover {
     cursor: pointer;
+    transform: scale(1.04);
 }

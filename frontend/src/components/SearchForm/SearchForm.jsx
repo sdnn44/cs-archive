@@ -25,7 +25,15 @@ const SearchForm = () => {
   const [open, setOpen] = useState(false);
 
   const Alert = React.forwardRef(function Alert(props, ref) {
-    return <MuiAlert elevation={6} ref={ref} variant="filled" sx={{zIndex: 'tooltip' }}{...props} />;
+    return (
+      <MuiAlert
+        elevation={6}
+        ref={ref}
+        variant="filled"
+        sx={{ zIndex: "tooltip" }}
+        {...props}
+      />
+    );
   });
 
   const handleClose = (event, reason) => {
@@ -84,7 +92,7 @@ const SearchForm = () => {
                 <Alert
                   onClose={handleClose}
                   severity="error"
-                  sx={{ width: "100%", fontSize: 13, zIndex: 'tooltip' }}
+                  sx={{ width: "100%", fontSize: 13, zIndex: "tooltip" }}
                 >
                   Nieprawidłowy format SteamID!
                 </Alert>
