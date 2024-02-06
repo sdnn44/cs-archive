@@ -25,6 +25,11 @@
     background: rgba(138, 6, 148, 0.705);
     transition: .3s ease-in-out;
 }
+.footer-text span {
+    color: rgb(139, 6, 148);
+    font-weight: 600;
+}
+
 @media (max-width: 600px) {
     .footer p {
         font-size: 1.5rem;

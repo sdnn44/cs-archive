@@ -48,7 +48,7 @@ const Home = () => {
             </Link>
           </Fade>
         </div>
-        <div className="container">
+        <div className="container-image">
           <div className="background-image">
             <img
               className={`parallax ${scrollPosition > 0 ? "active" : ""}`}

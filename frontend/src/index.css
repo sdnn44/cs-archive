@@ -30,5 +30,24 @@ html {
 body {
     background-color: var(--bg-color);
     color: var(--text-color);
-
 }
+* {
+    scrollbar-width: none;
+    scrollbar-color: #8f54a0 #b0abab;
+  }
+  /* Chrome, Edge, and Safari */
+  body::-webkit-scrollbar {
+    width: 7px;
+    height: 5px;
+  }
+
+  body::-webkit-scrollbar-track {
+    background: #0d0715;
+  }
+
+  body::-webkit-scrollbar-thumb {
+    background-color: #8f54a0;
+    border-radius: 0px;
+    border: 3px none #ffffff;
+  }
+

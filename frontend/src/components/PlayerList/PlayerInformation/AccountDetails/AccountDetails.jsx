@@ -17,8 +17,14 @@ export const AccountDetails = () => {
       <div className="player-title">
         <div className="title-text">O graczu</div>
         {/* <div className="level-text">Poziom Steam</div> */}
-        <div className={`player-level badge purple ${isProfilePrivate ? "blured" : ""}`}>
-          <div className="circle"><span>{isProfilePrivate ? 0 : steamLevel?.player_level}</span>Poziom</div>
+        <div
+          className={`player-level badge purple ${
+            isProfilePrivate ? "blured" : ""
+          }`}
+        >
+          <div className="circle">
+            <span>{isProfilePrivate ? 0 : steamLevel?.player_level}</span>Poziom
+          </div>
         </div>
       </div>
 

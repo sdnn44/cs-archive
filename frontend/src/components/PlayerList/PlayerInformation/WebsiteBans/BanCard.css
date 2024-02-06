@@ -118,6 +118,11 @@
     filter: grayscale(100%);
     margin: 16px 10px;
 }
+
+.avatar-banned {
+    filter: grayscale(0%)!important;
+}
+
 .half-circle {
     position: absolute;
     bottom: 0;
