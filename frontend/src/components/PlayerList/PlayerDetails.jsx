@@ -21,7 +21,7 @@ export const PlayerDetails = () => {
         <a href="https://cs-archive.vercel.app/" className="page-back">
           <ArrowBackIcon sx={{ fontSize: "3rem" }} className="arrow-back" />
         </a>
-        <span>Ostatnia aktualizacja bazy danych z banami graczy nastąpiła 05 lutego br. o godzinie 20:22.</span>
+        <span>Ostatnia aktualizacja bazy danych z banami graczy nastąpiła 14 lutego br. o godzinie 12:45.</span>
       </div>
       <BanList />
       <PlayerStatus />
