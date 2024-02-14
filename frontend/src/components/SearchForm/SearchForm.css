@@ -125,3 +125,31 @@
         padding: .1rem 3rem;
     }
 }
+@media (max-width: 340px) {
+    .search-form-elem {
+        padding: 0.1rem 2rem;
+    } 
+}
+@media (max-width: 330px) {
+    .search-form-elem {
+        padding: 0.01rem 1rem;
+    } 
+    #check-button {
+        font-size: .6rem;
+        margin: .4rem 0;
+        padding: .4rem;
+    }
+}
+@media (max-width: 315px) {
+    .form-control::placeholder {
+        font-size: .6rem;
+    }
+    .search-form-elem {
+        padding: 0.1rem 1rem;
+    } 
+    #check-button {
+        font-size: .5rem;
+        font-weight: 400;
+        padding: .4rem;
+    }
+}
