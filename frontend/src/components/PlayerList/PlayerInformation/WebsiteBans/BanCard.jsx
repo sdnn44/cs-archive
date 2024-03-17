@@ -1,4 +1,5 @@
 import React from "react";
+import { removeTextInBrackets } from "../../../../utils/remove-text-in-brackets";
 import "./BanCard.css";
 
 export const Card = ({ title, subtitle, websiteImg, data, status, href }) => {
@@ -23,10 +24,10 @@ export const Card = ({ title, subtitle, websiteImg, data, status, href }) => {
             <p>
               {" "}
               <span>Nick:</span>{" "}
-              {data &&
-                (data["Nick"] ||
-                  data["Nick gracza"] ||
-                  data["Nazwa Gracza"])}{" "}
+              {(data && data["Nick"]) ||
+                data["Nick gracza"] ||
+                data["Gracz"] ||
+                data["Nazwa Gracza"]}{" "}
             </p>
             <p>
               {" "}
@@ -55,16 +56,20 @@ export const Card = ({ title, subtitle, websiteImg, data, status, href }) => {
               {" "}
               <span>Wykonano dnia:</span>{" "}
               {data &&
-                (data["Wykonano"] ||
-                  data["Data"] ||
-                  data["Data bana"] ||
-                  data["Data Nadania"])}{" "}
+                removeTextInBrackets(
+                  data["Wykonano"] ||
+                    data["Data"] ||
+                    data["Data nadania bana"] ||
+                    data["Data bana"] ||
+                    data["Data Nadania"]
+                )}{" "}
             </p>
             <p>
               {" "}
               <span>Zbanowany przez:</span>{" "}
               {data &&
                 (data["Zbanowny przez"] ||
+                  data["Admin który nadał bana"] ||
                   data["Zbanowany przez"] ||
                   data["Admin"])}{" "}
             </p>

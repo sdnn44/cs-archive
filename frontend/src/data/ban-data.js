@@ -84,10 +84,17 @@ const cardData = [{
     },
     {
         title: "https://csowicze.pl/",
-        subtitle: "only dd2",
+        subtitle: "only dd2 & jailbreak",
         websiteImg: require("../images/csowicze.png"),
         dataKey: "dataCsowicze",
         href: "https://csowicze.pl/playerpanel/amxbans/bans/",
+    },
+    {
+        title: "https://csowicze.pl/",
+        subtitle: "only dd2",
+        websiteImg: require("../images/csowicze.png"),
+        dataKey: "dataCsowiczeDD2",
+        href: "https://csowicze.amxxbans.pl/bans",
     },
     {
         title: "https://1shot2kill.pl/",

@@ -40,6 +40,7 @@ const BanList = () => {
   const [dataKatujemy, setDataKatujemy] = useState([]);
   const [dataMaliver, setDataMaliver] = useState([]);
   const [dataCsowicze, setDataCsowicze] = useState([]);
+  const [dataCsowiczeDD2, setDataCsowiczeDD2] = useState([]);
   const [data1s2k, setData1s2k] = useState([]);
 
   useEffect(() => {
@@ -57,6 +58,7 @@ const BanList = () => {
     fetchData("bans/katujemy/", setDataKatujemy, steamID);
     fetchData("bans/maliver/", setDataMaliver, steamID);
     fetchData("bans/csowicze/", setDataCsowicze, steamID);
+    fetchData("bans/csowiczedd2/", setDataCsowiczeDD2, steamID);
     fetchData("bans/1shot2kill/", setData1s2k, steamID);
   }, [steamID]);
 
