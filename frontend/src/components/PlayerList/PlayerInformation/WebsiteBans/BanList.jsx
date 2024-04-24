@@ -35,6 +35,7 @@ const BanList = () => {
   const [dataGamefuture1, setDataGamefuture1] = useState([]);
   const [dataGamefuture2, setDataGamefuture2] = useState([]);
   const [dataFragarena, setDataFragarena] = useState([]);
+  const [dataFragarena2, setDataFragarena2] = useState([]);
   const [dataLuzownia, setDataLuzownia] = useState([]);
   const [dataFragujemy, setDataFragujemy] = useState([]);
   const [dataKatujemy, setDataKatujemy] = useState([]);
@@ -53,6 +54,7 @@ const BanList = () => {
     fetchData("bans/gamefuture1/", setDataGamefuture1, steamID);
     fetchData("bans/gamefuture2/", setDataGamefuture2, steamID);
     fetchData("bans/fragarena/", setDataFragarena, steamID);
+    fetchData("bans/fragarena2/", setDataFragarena2, steamID);
     fetchData("bans/luzownia/", setDataLuzownia, steamID);
     fetchData("bans/fragujemy/", setDataFragujemy, steamID);
     fetchData("bans/katujemy/", setDataKatujemy, steamID);
