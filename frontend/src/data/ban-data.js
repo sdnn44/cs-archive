@@ -3,7 +3,7 @@ const cardData = [{
     subtitle: "only dd2 #1",
     websiteImg: require("../images/strefaskilla.png"),
     dataKey: "dataStrefaDD2",
-    href: "https://banycs.strefaskilla.pl/ban_list.php",
+    href: "http://banycs16.strefaskilla.pl/ban_list.php",
 },
 {
     title: "https://strefaskilla.pl/",
