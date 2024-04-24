@@ -55,13 +55,6 @@ const cardData = [{
         href: "https://bany.fragujemy.com/cs16/bans/index.html",
     },
     {
-        title: "https://fragujemy.com/",
-        subtitle: "ONLY DD2+BF2",
-        websiteImg: require("../images/fragujemy.png"),
-        dataKey: "dataFragujemy",
-        href: "http://bf2-3maps.gameclan.pl/bany/ban_list.php",
-    },
-    {
         title: "https://bandaskilla.pl/",
         subtitle: "FFA & DD2",
         websiteImg: require("../images/bandaskilla.png"),
@@ -74,6 +67,13 @@ const cardData = [{
         websiteImg: require("../images/fragarena.png"),
         dataKey: "dataFragarena",
         href: "https://bans.fragarena.pl/",
+    },
+    {
+        title: "https://fragarena.pl/",
+        subtitle: "ONLY DD2+BF2",
+        websiteImg: require("../images/fragarena.png"),
+        dataKey: "dataFragarena2",
+        href: "http://bf2-3maps.gameclan.pl/bany/ban_list.php",
     },
     {
         title: "https://katujemy.eu/",
