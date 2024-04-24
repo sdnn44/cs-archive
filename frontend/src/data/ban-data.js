@@ -38,7 +38,7 @@ const cardData = [{
         subtitle: "only dd2 #2 & FFA",
         websiteImg: require("../images/gamefuture.png"),
         dataKey: "dataGamefuture2",
-        href: "https://gamefuture.pl/amxbans/ban_list.php",
+        href: "https://amxbans.gamefuture.pl/ban_list.php",
     },
     {
         title: "https://cs-luzownia.pl/",
