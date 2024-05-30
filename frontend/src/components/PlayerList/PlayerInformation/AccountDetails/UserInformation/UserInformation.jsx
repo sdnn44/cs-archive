@@ -1,8 +1,13 @@
 import React from "react";
 import { useGlobalContext } from "../../../../../context";
 import "./UserInformation.css";
-import { calculateTimeElapsed, unixTimestampToDateTime } from "../../../../../utils/unix-timestamp-to-date";
+import {
+  calculateTimeElapsed,
+  unixTimestampToDateTime,
+} from "../../../../../utils/unix-timestamp-to-date";
 import { useParams } from "react-router-dom";
+import { IconButton } from "@mui/material";
+import ExitToAppIcon from "@mui/icons-material/ExitToApp";
 
 export const UserInformation = (user) => {
   const { player } = useGlobalContext();
@@ -32,6 +37,17 @@ export const UserInformation = (user) => {
         {player?.timecreated
           ? calculateTimeElapsed(player?.timecreated)
           : `brak informacji`}
+      </p>
+      <p>
+        <span>Konto Steam:</span>{" "}
+        <IconButton
+          href={player?.profileurl}
+          aria-label="launch"
+          target="_blank"
+          sx={{ p: 0 }}
+        >
+          <ExitToAppIcon />
+        </IconButton>
       </p>
     </div>
   );
