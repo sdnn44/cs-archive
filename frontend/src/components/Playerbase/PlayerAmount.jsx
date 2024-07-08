@@ -11,7 +11,7 @@ export const PlayerAmount = () => {
           <PersonOffIcon sx={{ fontSize: "3.5rem" }} />
         </div>{" "}
         <div className="player-amount-text">
-          <div className="count">3998</div> graczy
+          <div className="count">4102</div> graczy
         </div>
       </div>
       <div className="website-amount">
