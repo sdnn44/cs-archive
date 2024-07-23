@@ -10,5 +10,5 @@
     width: 100vw;
     display: flex;
     padding: 3rem 3rem 3rem 3rem;
-    overflow-x: scroll;
+    overflow-x: auto;
 }
